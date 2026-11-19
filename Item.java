@@ -4,10 +4,10 @@ public class Item {
     private String quantity;
     private String price;
 
-    public void Item() {
+    public Item() {
     }
 
-    public void Item(String name, String description, String quantity, String price) {
+    public Item(String name, String description, String quantity, String price) {
         this.name = name;
         this.description = description;
         this.quantity = quantity;
