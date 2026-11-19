@@ -18,15 +18,19 @@ public class Main {
 
             switch (userInput) {
                 case "1":
+                    System.out.println("");
                     System.out.println("Input the item's name");
                     String name = input.nextLine();
 
+                    System.out.println("");
                     System.out.println("Input the item's description");
                     String description = input.nextLine();
 
+                    System.out.println("");
                     System.out.println("Input the current quantity of the item");
                     String quantity = input.nextLine();
 
+                    System.out.println("");
                     System.out.println("Input the current price of the item");
                     String price = input.nextLine();
 
@@ -39,6 +43,33 @@ public class Main {
                     break;
 
                 case "2":
+                    int n = 0;
+                    for (Item item : itemList) {
+                        System.out.println("");
+                        System.out.println("Name: " + item.GetName());
+                        System.out.println("Index #: " + n);
+                        System.out.println("");
+                        n++;
+                    }
+
+                    System.out.println("Input item index (leave blank to return to menu)");
+                    userInput = input.nextLine();
+
+                    try {
+                        int index = Integer.parseInt(userInput);
+                        if (index < itemList.size() && index >= 0) {
+                            System.out.println("");
+                            System.out.println(itemList.get(index).GetName());
+                            System.out.println(itemList.get(index).GetDescription());
+                            System.out.println(itemList.get(index).GetQuantity());
+                            System.out.println(itemList.get(index).GetPrice());
+                            System.out.println("");
+                        }
+                    } catch (Exception e) {
+                        System.err.println("No index integer detected: exit");
+                        break;
+                    }
+
                     break;
                 case "3":
                     break;
