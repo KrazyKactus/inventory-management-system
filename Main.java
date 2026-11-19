@@ -32,9 +32,12 @@ public class Main {
 
                     itemList.add(new Item(name, description, quantity, price));
 
+                    System.out.println("");
                     System.out.println("Item: " + itemList.get(itemList.size() - 1).GetName() + " added");
+                    System.out.println("");
 
                     break;
+
                 case "2":
                     break;
                 case "3":
